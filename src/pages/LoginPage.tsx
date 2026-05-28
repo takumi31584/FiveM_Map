@@ -93,7 +93,7 @@ export function LoginPage() {
 
         {mode === 'signup' && (
           <p className="mt-4 text-center text-xs text-gray-600">
-            申請後、管理者が承認するとログインできます
+            パスワードは8文字以上。申請後、管理者が承認するとログインできます
           </p>
         )}
       </div>

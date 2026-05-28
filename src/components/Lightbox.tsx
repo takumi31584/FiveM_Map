@@ -26,11 +26,11 @@ export function Lightbox({ url, mimeType, onClose }: LightboxProps) {
       >
         ✕
       </button>
-      <div onClick={(e) => e.stopPropagation()} className="max-h-[90vh] max-w-[90vw]">
+      <div className="max-h-[90vh] max-w-[90vw]">
         {mimeType.startsWith('image/') ? (
-          <img src={url} className="max-h-[90vh] max-w-[90vw] rounded object-contain" />
+          <img src={url} onClick={onClose} className="max-h-[90vh] max-w-[90vw] cursor-pointer rounded object-contain" />
         ) : (
-          <video src={url} controls autoPlay className="max-h-[90vh] max-w-[90vw] rounded" />
+          <video src={url} controls autoPlay onClick={(e) => e.stopPropagation()} className="max-h-[90vh] max-w-[90vw] rounded" />
         )}
       </div>
     </div>

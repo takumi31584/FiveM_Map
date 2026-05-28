@@ -36,7 +36,7 @@ markers.post('/', requireAuth, async (c) => {
   }>()
 
   // Only admins can create shared markers
-  const isShared = user.role === 'admin' && body.is_shared !== false ? 1 : 0
+  const isShared = user.role === 'admin' && body.is_shared === true ? 1 : 0
 
   const db = getDb()
   const now = new Date().toISOString()
